@@ -14,6 +14,7 @@ public:
             if(votes == 0)
             {
                 candidate = nums[i];
+                votes = 1;
             }
             else
             {
