@@ -6,6 +6,7 @@
 class Solution {
 public:
     int majorityElement(vector<int>& nums) {
+        //soln for majority element definitely exists
         int candidate = -1, votes = 0;
         int n = nums.size();
 
@@ -16,16 +17,17 @@ public:
                 candidate = nums[i];
                 votes = 1;
             }
+            else if(candidate == nums[i])
+                votes++;
             else
-            {
-                if(candidate == nums[i])
-                    votes++;
-                else
-                    votes--;
-            }            
+                votes--;                       
         }
 
-        int count = 0;
+        return candidate;
+
+        //this loop is needed when the majority element may or 
+        //may not be present. It rechecks the count and return the element.
+        /*int count = 0;
         for(int i = 0; i < n; i++)
         {
             cout << nums[i] << " " << candidate << endl;
@@ -36,6 +38,6 @@ public:
         if(count > n / 2)
             return candidate;
         
-        return -1;
+        return -1;*/
     }
 };
