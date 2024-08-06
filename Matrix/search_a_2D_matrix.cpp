@@ -1,3 +1,6 @@
+//Problem link - https://leetcode.com/problems/search-a-2d-matrix/
+//solved using binary search. TC - O(log nm)
+
 class Solution {
 public:
     bool searchMatrix(vector<vector<int>>& matrix, int target) {
