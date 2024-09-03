@@ -22,4 +22,15 @@ class Solution{
         return result;
     }
 
+        //Another method by using recursion
+        /*long long val;
+        
+        if(R == 0)
+            return 1;
+        
+        val = power(N, R / 2) % MOD;
+        if(R % 2 == 0)
+            return (val * val) % MOD;
+        else
+            return (((N * val) % MOD) * val) % MOD;*/
 };
